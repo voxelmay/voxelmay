@@ -1,6 +1,6 @@
 use glam::IVec3;
 
-#[derive(Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 pub struct ChunkPos {
     pub x: i32,
     pub y: i32,
