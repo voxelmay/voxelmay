@@ -10,17 +10,12 @@ use crate::{
     },
 };
 
+#[derive(Default)]
 pub struct World {
     chunks: HashMap<ChunkPos, Chunk>,
 }
 
 impl World {
-    pub fn new() -> Self {
-        Self {
-            chunks: HashMap::new(),
-        }
-    }
-
     pub fn get_block(&self, pos: IVec3) -> Option<BlockId> {
         let chunk = self.chunks.get(&ChunkPos::from_world_pos(pos))?;
         Some(chunk.get_local(ChunkPos::local_pos(pos)))
