@@ -10,3 +10,5 @@ documentation = "https://github.com/voxelmay/voxelmay"
 authors = ["Benjamin Kalb <benjaminkalb2001@gmail.com>"]
 
 [dependencies]
+# Mathematics
+glam = "0.34.3"
