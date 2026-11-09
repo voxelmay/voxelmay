@@ -31,13 +31,14 @@ impl Chunk {
     }
 
     #[inline]
-    pub fn set_local(&mut self, local: IVec3, block: BlockId) {
+    pub fn set_local(&mut self, local: IVec3, block: BlockId) -> bool {
         let i = Self::index(local);
         if self.blocks[i] == block {
-            return;
+            return false;
         }
         self.blocks[i] = block;
         self.dirty = true;
+        true
     }
 
     #[inline]
